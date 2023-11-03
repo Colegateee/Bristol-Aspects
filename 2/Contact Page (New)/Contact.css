@@ -1,0 +1,678 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.gridd{
+    padding: 0px;
+    display: grid;
+    width: 100%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 10px 100px 50px 200px;
+    min-height: 1080px;
+    overflow: hidden;
+
+    grid-template-areas: 
+    "navbar navbar navbar"
+    "Line1 Line2 Line3"
+    "ContactText ContactText x"
+    "Linee Linee Linee"
+    "Logo1container Logo2container Logo3container"
+    "ContactContainer ContactContainer ContactContainer";
+}
+
+
+.navbar{
+    background-color: black;
+    color: white;
+
+    grid-area: navbar;
+
+    position: sticky;
+    top: 0px;
+
+    text-decoration: none;
+}
+.clean{
+    text-decoration: inherit;
+    color: white;
+    margin-right: 80px;
+}
+a {
+    text-decoration-color: black;
+    list-style: none;
+    color: black;
+}
+li{
+    display: inline;
+}
+ul {
+    list-style: none;
+}
+
+
+
+.hr{
+    grid-area: Linee;
+}
+.contactHr{
+    grid-area: contactHR;
+    position: relative;
+}
+.hr1{
+    grid-area: Line1;
+    opacity: 0;
+}
+.hr2{
+    grid-area: Line2;
+    opacity: 0;
+}
+.hr3{
+    grid-area: Line3;
+    opacity: 0;
+}
+
+
+
+.ContactText{
+    text-align: left;
+    color: black;
+    font-size: 45px;
+    position: relative;
+    top: 60%;
+    left: 8%;
+    grid-area: ContactText;
+}
+
+
+.Logo1container{
+    grid-area: Logo1container;
+    display: grid;
+    height: 270px;
+
+    grid-template-areas:
+    "Logo1"
+    "Logo1text";
+}
+.Logo1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-area: Logo1;
+    grid-template-areas: 
+    "actualLogo1";
+}
+.actualLogo1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: actualLogo1;
+    background-image: url("../Imgs/ContactPage/Phone_log(bg removed).png");
+    min-height: 130px;
+    min-width: 140px;
+    padding-left: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Logo1textContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-area: Logo1text;
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 25px;
+    grid-template-areas: 
+    "actualLogoTitle1"
+    "actualLogoText1";
+}
+.LogoTextTitle1{
+    grid-area: actualLogoTitle1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+}
+.actualLogoText1{
+    grid-area: actualLogoText1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-size: 17px;
+    position: relative;
+    top: 30px;
+}
+
+
+
+
+.Logo2container{
+    grid-area: Logo2container;
+    display: grid;
+    height: 270px;
+
+    grid-template-areas:
+    "Logo2"
+    "Logo2text"
+}
+.Logo2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-area: Logo2;
+    grid-template-areas: 
+    "actualLogo2";
+}
+.actualLogo2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: actualLogo2;
+    background-image: url("../Imgs/ContactPage/chat bubble 2.png");
+    min-height: 130px;
+    min-width: 140px;
+    padding-left: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Logo2textContainer{
+    display: grid;
+    grid-area: Logo2text;
+    grid-template-rows: 50px 25px;
+    grid-template-areas: 
+    "actualLogoTitle2"
+    "actualLogoText2";
+}
+.LogoTextTitle2{
+    grid-area: actualLogoTitle2;
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.actualLogoText2{
+    grid-area: actualLogoText2;
+    text-align: center;
+    color: black;
+    font-size: 17px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 30px;
+}
+
+
+
+
+.Logo3container{
+    grid-area: Logo3container;
+    display: grid;
+    height: 270px;
+
+    grid-template-areas:
+    "Logo3"
+    "Logo3text"
+}
+.Logo3{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    grid-area: Logo3;
+    grid-template-areas: 
+    "actualLogo3";
+}
+.actualLogo3{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    grid-area: actualLogo3;
+    background-image: url("../Imgs/ContactPage/email logo bg removed.png");
+    min-height: 130px;
+    min-width: 140px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.Logo3textContainer{
+    position: relative;
+    display: grid;
+    grid-area: Logo3text;
+    grid-template-rows: 50px 25px;
+    grid-template-areas: 
+    "actualLogoTitle3"
+    "actualLogoText3";
+}
+.LogoTextTitle3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: actualLogoTitle3;
+    text-align: left;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+}
+.actualLogoText3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: actualLogoText3;
+    text-align: center;
+    color: black;
+    font-size: 17px;
+    position: relative;
+    top: 30px;
+}
+
+
+
+.ContactContainer{
+    position: relative;
+    top:20%;
+    grid-area: ContactContainer;
+    display: grid;
+    width: 100%;
+    max-width: 93vw;
+    height: 500px;
+    grid-template-columns: 1fr 1fr;
+    max-width: minmax(1fr, 1fr);
+    grid-template-rows: 100px 50px 20px 10vh;
+    max-height: minmax(1fr, 1fr);
+
+    grid-template-areas: 
+    "ContactTitle ContactTitle"
+    "contactHR contactHR"
+    "contactFormContainer contactFormContainer";
+}
+.ContactTitle{
+    grid-area: ContactTitle;
+    text-align: left;
+    color: black;
+    font-size: 45px;
+    position: relative;
+    left: 5.8%;
+    top: 60%;
+}
+
+
+
+.Form{
+    grid-area: contactFormContainer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: minmax(1fr, auto);
+    max-height: minmax(1fr, 1fr);
+    grid-template-rows: repeat(5, 50px);
+
+    grid-template-areas: 
+    "form form"
+    "form form"
+    "form form"
+    "form form"
+    "form form";
+
+}
+.contactFormContainer{
+    grid-area: form;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: minmax(1fr, auto);
+    grid-template-rows: repeat(4, 50px);
+
+    grid-template-areas: 
+    "EmailLabel commentLabel"
+    "emailForm commentForm"
+    "nameLabel commentForm"
+    "nameForm commentForm"
+    "submitbutton submitbutton";
+
+}
+
+
+
+
+.EmailLabel{
+    grid-area: EmailLabel;
+    text-align: left;
+    color: black;
+    font-size: 20px;
+    position: relative;
+    left: 12%;
+    top: 40%;
+}
+.emailForm{
+    grid-area: emailForm;
+    position: relative;
+    left: 11%;
+}
+
+
+
+.nameLabel{
+    grid-area: nameLabel;
+    text-align: left;
+    color: black;
+    font-size: 20px;
+    position: relative;
+    left: 12%;
+    top: 40%;
+}
+.nameForm{
+    grid-area: nameForm;
+    position: relative;
+    left: 11%;
+}
+
+
+.commentLabel{
+    grid-area: commentLabel;
+    text-align: left;
+    color: black;
+    font-size: 20px;
+    position: relative;
+    left: 12%;
+    top: 40%;
+}
+.commentForm{
+    grid-area: commentForm;
+    position: relative;
+    left: 11%;
+}
+
+
+
+
+
+
+
+input[type=text]{
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.inputheight{
+    line-height: auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    resize: vertical;
+    max-height: 140px;
+}
+.Button{
+    grid-area: submitbutton;
+    background-color: black; 
+    position: relative;
+    width: 250px;
+    top: 40%;
+    left: 11%;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
+.Button {
+    transition-duration: 0.4s;
+    width: 250px;
+}
+  
+.Button:hover{
+    background-color: white; 
+    color: black;
+    cursor: pointer;
+    border: black 0.3px solid;
+}
+
+@media screen and (max-width: 910px){
+    .gridd{
+        padding: 0px;
+        display: grid;
+        width: 100%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+        grid-template-rows: 50px 100px 20px 250px 20px 250px 20px 250px 20px;
+        min-height: 1700px;
+        overflow-x: hidden;
+    
+        grid-template-areas: 
+        "navbar navbar navbar"
+        "ContactText ContactText x"
+        "Linee Linee Linee"
+        "Logo1container Logo1container Logo1container"
+        "Line1 Line1 Line1"
+        "Logo2container Logo2container Logo2container"
+        "Line2 Line2 Line2"
+        "Logo3container Logo3container Logo3container"
+        "Line3 Line3 Line3"
+        "ContactContainer ContactContainer ContactContainer";
+    }
+
+
+    .Logo1container{
+        display: grid;
+        width: 100%;
+        grid-area: Logo1container;
+        grid-auto-columns: 1fr 2fr;
+        grid-auto-rows: 1fr;
+        grid-template-areas: 
+        "Logo1 Logo1text";
+    }
+    .Logo1{
+        display: grid;
+        grid-area: Logo1;
+        grid-template-areas: "actualLogo1";
+    }
+    .actualLogo1{
+        min-height: 150px;
+        min-width: 90px;
+        position: relative;
+        grid-area: actualLogo1;
+        background-image: url("../Imgs/ContactPage/Phone_log(bg removed).png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .Logo1textContainer{
+        color: black;
+        font-size: 20px;
+        grid-area: Logo1text;
+    }
+    .LogoTextTitle1{
+        top: 30px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .actualLogoText1{
+        position: relative;
+        text-align: left;
+        top: 55px;
+        left: 0%;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+
+
+
+    .Logo2container{
+        display: grid;
+        grid-area: Logo2container;
+        width: 100%;
+        grid-auto-columns: 1fr 2fr;
+        grid-auto-rows: 1fr;
+        grid-template-areas: 
+        "Logo2 Logo2text";
+    }
+    .Logo2{
+        grid-area: Logo2;
+        display: grid;
+        grid-template-areas: 
+        "actualLogo2";
+    }
+    .actualLogo2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        min-height: 130px;
+        min-width: 75px;
+        position: relative;
+        grid-area: actualLogo2;
+        background-image: url("../Imgs/ContactPage/chat bubble 2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .Logo2textContainer{
+        text-align: left;
+        color: black;
+        font-size: 20px;
+        grid-area: Logo2text;
+    }
+    .actualLogoText2{
+        top: 30px;
+        display: flex;
+        text-align: left;
+        justify-content: left;
+        align-items: flex-start;
+    }
+    .LogoTextTitle2{
+        top: 55px;
+        text-align: left;
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+    }
+
+
+
+
+    .Logo3container{
+        display: grid;
+        grid-area: Logo3container;
+        width: 100%;
+        grid-auto-columns: 1fr 2fr;
+        grid-auto-rows: 1fr;
+        grid-template-areas: 
+        "Logo3 Logo3text";
+    }
+    .Logo3{
+        grid-area: Logo3;
+        display: grid;
+        grid-template-areas: "actualLogo3";
+    }
+    .actualLogo3{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 170px;
+        min-width: 120px;
+        left: 20px;
+        grid-area: actualLogo3;
+        background-image: url("../Imgs/ContactPage/email logo bg removed.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .Logo3textContainer{
+        text-align: center;
+        color: black;
+        font-size: 20px;
+        grid-area: Logo3text;
+    }
+    .LogoTextTitle3{
+        position: relative;
+        top: 75px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .actualLogoText3{
+        position: relative;
+        text-align: left;
+        top: 55px;
+        left: 0%;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+
+    .ContactContainer{
+        top: 0%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .contactFormContainer{
+        grid-template-columns: 1fr;
+
+        grid-template-areas: 
+        "EmailLabel"
+        "emailForm"
+        "nameLabel"
+        "nameForm"
+        "commentLabel"
+        "commentForm";
+    }
+    .commentLabel{
+        top: 69%;
+    }
+    .commentForm{
+        top: 15%;
+    }
+    .Button{
+        top: 60%;
+    }
+    
+}
+@media screen and (max-width: 660px){
+    .actualLogoText1{
+        position: relative;
+        left: 8%;
+    }
+    .actualLogoText2{
+        position: relative;
+        left: 8%;
+    }
+    .actualLogoText3{
+        position: relative;
+        left: 8%;
+    }
+
+    
+    .LogoTextTitle1{
+        position: relative;
+        left: 8%;
+    }
+    .LogoTextTitle2{
+        position: relative;
+        left: 8%;
+    }
+    .LogoTextTitle3{
+        position: relative;
+        left: 8%;
+    }
+}

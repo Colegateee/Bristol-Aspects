@@ -1,0 +1,328 @@
+body{
+    border: 0px;
+    margin: 0px;
+}
+
+.gridd{
+    border: 0px;
+    padding: 0px;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: minmax(1fr, auto);
+    grid-template-rows: 50px 100px 100px;
+    max-height: minmax(1fr, auto);
+    overflow-x:hidden; 
+
+    grid-template-areas: 
+    "navbar navbar"
+    "galleryText galleryText"
+    "linee linee"
+    "galleryContainer galleryContainer";
+
+}
+
+
+.navbar{
+    background-color: black;
+    color: white;
+    width: 100%;
+    z-index: 1;
+
+    grid-area: navbar;
+
+    position: sticky;
+    top: 0px;
+
+    text-decoration: none;
+}
+.clean{
+    text-decoration: inherit;
+    color: white;
+    margin-right: 80px;
+}
+a {
+    text-decoration-color: black;
+    list-style: none;
+    color: black;
+}
+li{
+    display: inline;
+}
+ul {
+    list-style: none;
+}
+
+
+
+.hr{
+    grid-area: linee;
+}
+
+
+.galleryText{
+    text-align: left;
+    color: black;
+    font-size: 45px;
+    position: relative;
+    top: 55%;
+    padding-left: 5%;
+    grid-area: galleryText;
+}
+
+
+
+.galleryContainer{
+    grid-area: galleryContainer;
+    display: grid;
+    padding: 0px;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 120px;
+    max-width: minmax(1fr, auto);
+    max-height: minmax(1fr, auto);
+    
+
+    grid-template-areas:
+    "quoteText quoteText quoteText quoteText quoteCredit"
+    "x imgs imgs imgs y"
+;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+}
+.quoteText{
+    grid-area: quoteText;
+    display: grid;
+    padding: 0px;
+    width: 100%;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    text-align: center;
+    font-size: 35px;
+    top: -40%;
+    left: 9%;
+}
+.quoteCredit{
+    grid-area: quoteCredit;
+    display: grid;
+    padding: 0px;
+    width: 200px;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    text-align: center;
+    font-size: 30px;
+    top: 40%;
+    left: -70%;
+
+}
+
+
+
+.imgs{
+    grid-area: imgs;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+    
+    grid-template-areas:
+    "pic1 pic2 pic3"
+    "pic4 pic5 pic6"
+    "pic7 pic8 pic9"
+    "pic10 pic11 pic12"
+}
+
+
+.pic1{
+    max-width: 100%;
+    height: auto;
+    grid-area: pic1;
+    padding: 20px;
+    transition: 0.5s;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.pic1:hover{
+    transform: scale(1.1);
+}
+.pic2{
+    max-width: 100%;
+    height: auto;
+    grid-area: pic2;
+    padding: 20px;
+    transition: 0.5s;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.pic2:hover{
+    transform: scale(1.1);
+}
+.pic3{
+    max-width: 100%;
+    height: auto;
+    grid-area: pic3;
+    padding: 20px;
+    transition: 0.5s;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.pic3:hover{
+    transform: scale(1.1);
+}
+.pic4{
+    max-width: 100%;
+    height: auto;
+    grid-area: pic4;
+    padding: 20px;
+    transition: 0.5s;
+    display: grid;
+    position: relative;
+    top: -5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.pic4:hover{
+    transform: scale(1.1);
+}
+.pic5{
+    max-width: 100%;
+    height: auto;
+    grid-area: pic5;
+    padding: 20px;
+    transition: 0.5s;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+    top: -10%;
+
+}
+.pic5:hover{
+    transform: scale(1.07);
+}
+.pic6{
+    max-width: 100%;
+    height: auto;
+    grid-area: pic6;
+    padding: 20px;
+    transition: 0.5s;
+    display: grid;
+    position: relative;
+    top: -5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.pic6:hover{
+    transform: scale(1.1);
+}
+.pic7{
+    max-width: 100%;
+    height: auto;
+    grid-area: pic7;
+    padding: 20px;
+    transition: 0.5s;
+    display: grid;
+    position: relative;
+    top: -100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.pic7:hover{
+    transform: scale(1.1);
+}
+.pic8{
+    max-width: 100%;
+    height: auto;
+    grid-area: pic8;
+    padding: 20px;
+    transition: 0.5s;
+    display: grid;
+    position: relative;
+    top: -78%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.pic8:hover{
+    transform: scale(1.1);
+}
+.pic9{
+    max-width: 100%;
+    height: auto;
+    grid-area: pic9;
+    padding: 20px;
+    transition: 0.5s;
+    display: grid;
+    position: relative;
+    top: -18%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.pic9:hover{
+    transform: scale(1.1);
+}
+.pic10{
+    max-width: 100%;
+    height: auto;
+    grid-area: pic10;
+    padding: 20px;
+    transition: 0.5s;
+    display: grid;
+    position: relative;
+    top: -125%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.pic10:hover{
+    transform: scale(1.1);
+}
+.pic11{
+    max-width: 100%;
+    height: auto;
+    grid-area: pic11;
+    padding: 20px;
+    transition: 0.5s;
+    display: grid;
+    position: relative;
+    top: -95%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.pic11:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1180px){
+    .imgs{
+        position: relative;
+        left: -20%;
+    }
+}
+
+@media screen and (max-width: 1030px){
+    .imgs{
+        position: relative;
+        left: -30%;
+    }
+}
+@media screen and (max-width: 950px){
+    .quoteText{
+        font-size: 25px;
+    }
+    .quoteCredit{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 515px){
+    .quoteText{
+        font-size: 25px;
+    }
+    .quoteCredit{
+        top: 50%;
+        left: 20%;
+    }
+}

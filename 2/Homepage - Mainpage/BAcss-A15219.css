@@ -1,0 +1,729 @@
+body{
+    border: 0px;
+    margin: 0px;
+    overflow-x:hidden;
+    max-width: 100vw;
+
+}
+
+@import url("BAcss-A15219.css");
+
+.gridd{
+    border: 0px;
+    padding: 0px;
+    display: grid;
+    width: 100%;
+    height: 1700px;
+    grid-template-columns: 1fr 2fr 1fr;
+    max-width: minmax(1fr, auto);
+    grid-template-rows: 50px;
+    grid-template-rows: minmax(1fr, 1fr);
+    max-width: 100vw;
+
+    grid-template-areas: 
+    "navbar navbar navbar"
+    "mainI mainI mainI"
+    "mainI mainI mainI"
+    "x wrap1 y"
+    "x wrap1 y"
+    "x wrap1 y"
+    "x wrap1 y"
+    "x wrap2 y"
+    "x wrap2 y"
+    "x wrap2 y"
+    "x wrap2 y"
+;
+
+}
+
+
+.wrapNestedGrid1{
+    cursor: pointer;
+    grid-area: wrap1;
+    display: grid;
+    max-height: 300px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(1fr, auto);
+    grid-template-areas: 
+    "nestedgrid1"
+}
+.nestedgrid1{
+    grid-area: nestedgrid1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 50px 10px 1fr;
+    max-height: 300px;
+    transition: 0.5s;
+    grid-gap: 25px;                                                                     
+    grid-template-areas: 
+    "subtitle1 subtitle1 subtitle1"
+    "subLine subLine subLine"
+    "pic1 sub1 sub1"
+}
+.nestedgrid1:hover{
+    transform: scale(1.02);
+    opacity: 0.99;
+}
+.subtitle1Container{
+    position: relative;
+    top: 20%;
+    grid-area: subtitle1;
+    display: grid;
+    text-align: center;
+    font-size: 45px;
+    grid-template-areas: 
+    "actualSubtitle1"
+}
+.subtitle1{
+    color: black;
+    transition: 0.5s;
+    grid-area: actualSubtitle1;
+}
+.subLine{
+    grid-area: subLine;
+}
+
+.pic1Container{
+    grid-area: pic1;
+    display: grid;
+    max-height: 300px;
+    grid-template-areas: 
+    "actualPic1";
+}
+.pic1{
+    grid-area: actualPic1;
+    background-image: url("../Imgs/4d755adfdc31528c5cc71b7f9c30d9fb.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    min-width: 300px;
+
+}
+.sub1Container{
+    display: grid;
+    grid-area: sub1;
+    grid-template-areas: 
+    "actualSub1"
+}
+.sub1{
+    grid-area: actualSub1;
+    color: black;
+    font-size: 14px;
+    padding-top: 0px;
+}
+
+
+
+
+.wrapNestedGrid2{
+    cursor: pointer;
+    grid-area: wrap2;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+    max-height: 350px;
+    grid-auto-rows: minmax(1fr, auto);
+
+    grid-template-areas: 
+    "nestedgrid2"
+}
+.nestedgrid2{
+    grid-area: nestedgrid2;
+    display: grid;
+    max-height: 350px;
+    grid-gap: 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 50px 10px 1fr;
+    transition: 0.5s;
+    grid-gap: 25px;
+    grid-template-areas: 
+    "subtitle2 subtitle2 subtitle2"
+    "subLine2 subLine2 subLine2"
+    "pic2 sub2 sub2";
+}
+.nestedgrid2:hover{
+    transform: scale(1.01);
+    opacity: 0.99;
+}
+.subtitle2Container{
+    display: grid;
+    grid-area: subtitle2;
+    position: relative;
+    top: 40%;
+    grid-template-areas: 
+    "actualSubtitle2";
+}
+.subtitle2{
+    text-align: center;
+    color: black;
+    font-size: 45px;
+    grid-area: actualSubtitle2;
+}
+.subLine2{
+    grid-area: subLine2;
+}
+.pic2Container{
+    display: grid;
+    grid-area: pic2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "actualpic2";
+}
+.pic2{
+    grid-area: actualpic2;
+    background-image: url("../Imgs/pic2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width: 300px;
+}
+.sub2Container{
+    display: grid;
+    grid-area: sub2;
+    grid-template-areas: 
+    "actualSub2"
+}
+.sub2{
+    grid-area: actualSub2;
+    color: black;
+    font-size: 14px;
+    padding-top: 0px;
+}
+
+
+
+
+.clean{
+    text-decoration: inherit;
+    color: white;
+    margin-right: 80px;
+}
+.clean2{
+    list-style: none;
+    margin-right: 80px;
+}
+
+a {
+    text-decoration-color: black;
+    list-style: none;
+    color: black;
+}
+
+
+li{
+    display: inline;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+.hr{
+    grid-area: Line;
+}
+.hr2{
+    grid-area: Line2;
+    margin-top: 0px;
+}
+
+
+
+.navbar{
+    grid-area: navbar;
+    background: black;
+    color: white;
+    position: fixed;
+    width: 100vw;
+    top:0;
+    text-decoration: none;
+    z-index: 2;
+}
+
+
+@keyframes banner-slide{
+    0% {left: 0px;}
+    10% {left: 100vw}
+    20% {left: 100vw}
+    30% {left: 100vw}
+    40% {left: 0vw}
+    50% {left: 0vw}
+    60% {left: 100vw}
+    70% {left: 100vw}
+    80% {left: 100vw}
+    90% {left: 0vw}
+    100% {left: 0vw}
+}
+
+.mainISlider{
+    grid-area: mainI;
+    display: grid;
+    grid-template-areas: 
+    "actualMainI";
+    overflow: hidden;
+}
+.mainI{
+    margin: 0 0 0 -100vw;
+    position: relative;
+    animation-name: banner-slide;
+    animation-duration: 26s;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    grid-area: actualMainI;
+    height: 60vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: 
+    "x y z"
+    "Linee Linee Linee"
+    "actualTitle actualTitle actualTitle"
+    "Linee2 Linee2 Linee2";
+
+}
+.main-container{
+    height: 60vh;
+    width: 100vw;
+    float: left;
+    background-repeat: no-repeat;
+    display: grid;
+
+    grid-template-areas: 
+    "actualMainI2 actualMainI1";
+}
+.actualMainI1{
+    min-height: 60vh;
+    min-width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: actualMainI1;
+    background-image: url(../Imgs/mainI.jpeg);
+}
+.actualMainI2{
+    min-height: 60vh;
+    min-width: 100vw;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: actualMainI2;
+    background-image: url(../Imgs/675758.jpg);
+}
+.title{
+    grid-area: actualMainI;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: 
+    "bristol bristol bristol"
+    "banksy banksy banksy"
+}
+
+.actualTitle{
+    top: 36%;
+    grid-area: bristol;
+    text-align: center;
+    color: rgba(60, 60, 60, 1);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 100px;
+}
+.actualTitle2{
+    grid-area: banksy;
+    text-align: center;
+    color: rgba(60, 60, 60, 1);
+    position: relative;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size: 150px;
+}
+
+ 
+
+.space{
+    grid-area: space;
+    max-height: 10px;
+}
+
+@media screen and (max-width: 1650px){
+    .mainISlider{
+        min-height: 400px;
+        min-width: 100%;
+    }
+    .mainI{
+        min-height: 400px;
+    }
+}
+
+@media screen and (max-width: 1350px){
+    .mainISlider{
+        min-height: 50vh;
+    }
+    .mainI{   
+        min-height: 50vh;
+        background-image: url("../Imgs/mainI.jpeg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    
+        grid-template-areas: 
+        "actualTitle actualTitle x"
+        "x y z"
+        "x y z"
+        "x y z"
+    ;
+    
+    }
+    .title{
+        grid-area: actualMainI;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    
+        grid-template-areas: 
+        "bristol bristol bristol"
+        "banksy banksy"
+    }
+    
+    .actualTitle{
+        grid-area: bristol;
+        color: rgba(60, 60, 60, 1);
+        text-align: left;
+        font-size: 70px;
+    }
+    .actualTitle2{
+        grid-area: banksy;
+        text-align: left;
+        color: rgba(60, 60, 60, 1);
+        font-size: 120px;
+    }
+    .gridd{
+        border: 0px;
+        padding: 0px;
+        display: grid;
+        width: 100%;
+        height: 1500px;
+        grid-template-rows: 50px;
+        
+    
+        grid-template-areas: 
+        "navbar navbar navbar"
+        "mainI mainI mainI"
+        "mainI mainI mainI"
+        "x wrap1 y"
+        "x wrap1 y"
+        "x wrap2 y"
+        "x wrap2 y"
+    ;
+    
+    }
+    .wrapNestedGrid1{
+        grid-area: wrap1;
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(1fr, auto);
+        grid-template-areas: 
+        "nestedgrid1"
+    }
+    .nestedgrid1{
+        grid-area: nestedgrid1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 20px 50px 1fr 1fr;
+        grid-gap: 0px;
+        min-height: 500px;                                                                
+        grid-template-areas: 
+        "subLine subLine"
+        "subtitle1 subtitle1"
+        "pic1 pic1"
+        "sub1 sub1"
+    }
+    .subtitle1Container{
+        font-size: 34px;
+    }
+    .pic1{
+        min-width: 450px;
+        background-size: 450px 200px;
+    }
+    .pic1Container{
+        grid-row-gap: 40px;
+        max-height: 180px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "x actualPic1 y"
+        "x actualPic1 y"
+    }
+    .sub1{
+        font-size: 13px;
+        text-align: center;
+    }
+    .wrapNestedGrid2{
+        grid-area: wrap2;
+        display: grid;
+        position: relative;
+        top: 20%;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "nestedgrid2"
+    }
+    .nestedgrid2{
+        position: relative;
+        top: 30%;
+        grid-area: nestedgrid2;
+        display: grid;
+        grid-auto-rows: 10px 50px 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0px;
+        min-height: 500px;                                                                    
+        grid-template-areas: 
+        "subLine2 subLine2"
+        "subtitle2 subtitle2"
+        "pic2 pic2"
+        "sub2 sub2"
+    }
+    .subtitle2Container{
+        position: relative;
+        top: -19%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .subLine2{
+        position: relative;
+        top: -10%;
+    }
+    .subtitle2{
+        font-size: 34px;
+    }
+    .pic2Container{
+        max-height: 200px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "x actualPic2 y"
+        "x actualPic2 y"
+    }
+    .pic2{
+        grid-area: actualPic2;
+        min-width: 450px;
+        background-size: 450px 200px;
+    }
+    .sub2{
+        text-align: center;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .gridd{
+        border: 0px;
+        padding: 0px;
+        display: grid;
+        width: 100%;
+        max-height: 1500px;
+        grid-template-columns: minmax(1fr, auto);
+        max-width: minmax(1fr, auto);
+        grid-template-rows: 50px;
+        grid-template-rows: minmax(1fr, 1fr);
+        
+    
+        grid-template-areas: 
+        "navbar navbar navbar"
+        "mainI mainI mainI"
+        "mainI mainI mainI"
+        "wrap1 wrap1 y"
+        "wrap1 wrap1 y"
+        "wrap2 wrap2 y"
+        "wrap2 wrap2 y"
+    ;
+    
+    }
+    .subLine{
+        width: 50%;
+    }
+    .subLine2{
+        width: 50%;
+    }
+    .wrapNestedGrid1{
+        position: relative;
+        top: 10%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 70%;
+        min-height: 600px;
+    }
+    .nestedgrid1{
+        grid-template-rows: 20px 50px 1fr 1fr;
+        grid-template-areas:
+        "subLine subLine x y"
+        "subtitle1 subtitle1 x y"
+        "pic1 pic1 x y"
+        "sub1 sub1 x y" 
+    }
+    .sub1Container{
+        padding-left: 30px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        display: grid;
+        grid-area: sub1;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "actualSub1 actualSub1 actualSub1 y"
+
+    }
+    .sub1{
+        text-align: left;
+        grid-area: actualSub1;
+    }
+    .sub1Container{
+        position: relative;
+    }
+    .pic1Container{
+        padding-left: 30px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .subtitle1Container{
+        padding-left: 30px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .subLine{
+        position: relative;
+        left: -18%;
+    }
+
+
+
+    .wrapNestedGrid2{
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 70%;
+        min-height: 600px;
+    }
+    .nestedgrid2{
+        top: -10%;
+        grid-gap: 0px;
+        grid-template-rows: 20px 50px 1fr 1fr;
+        grid-template-areas:
+        "subLine2 subLine2 x y"
+        "subtitle2 subtitle2 x y"
+        "pic2 pic2 x y"
+        "sub2 sub2 x y" 
+    }
+    .subtitle2Container{
+        position: relative;
+        top: 10%;
+       padding-left: 30px;
+       min-width: 500px;
+       display: flex;
+       align-items: flex-start;
+       justify-content: flex-start;
+    }
+    .sub2Container{
+        position: relative;
+        top: 10%;
+        padding-left: 30px;
+        width: 300px;
+        display: grid;
+        grid-area: sub2;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "x actualSub2 actualSub2 y"
+
+    }
+    .sub2{
+        grid-area: actualSub2;
+        text-align: left;
+    }
+    .pic2Container{
+        left: -2%;
+        position: relative;
+        top: 9%;
+    }
+    .subLine2{
+        position: relative;
+        left: -18%;;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .pic1{
+        grid-area: actualPic1;
+        min-width: 300px;
+        background-size: 300px 170px;
+    }
+    .pic2{
+        grid-area: actualPic2;
+        min-width: 300px;
+        background-size: 300px 170px;
+    }
+    .sub1{
+        font-size: 10px;
+    }
+    .sub1Container{
+        position: relative;
+        top:-15%;
+    }
+    .subtitle1Container{
+        font-size: 25px;
+    }
+    .sub2{
+        font-size: 10px;
+    }
+    .sub2Container{
+        position: relative;
+        top:-15%;
+    }
+    .subtitle2Container{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .subtitle1Container{
+        width: 500px;
+    }
+    .sub2Container{
+        position: relative;
+        top: 5%;
+    }
+    .pic2Container{
+        grid-template-areas: 
+        "actualPic2 y";
+
+        position: relative;
+        left: 5%;;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,324 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.gridd{
+    padding: 0px;
+    display: grid;
+    width: 100%;
+    height: 5700px;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: minmax(1fr, auto);
+    grid-template-rows: 50px;
+    overflow-x: hidden;
+    overflow-y:hidden;
+    
+
+    grid-template-areas: 
+    "navbar navbar navbar navbar"
+    "nestedgrid1 nestedgrid1 nestedgrid1 nestedgrid1";
+}
+.nestedgrid1{
+    position: relative;
+    top: 30px;
+    padding: 0px;
+    display: grid;
+    width: 99vw;
+    height: 1080px;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: minmax(1fr, auto);
+    max-height: minmax(150px, auto);
+    max-height: 250px;
+    grid-row-gap: 25px;
+
+    
+    grid-template-areas: 
+    "x title title y"
+    "x credit credit y"
+    "x text1 text1 y"
+    "x text2 text2 y"
+    "x text3 text3 y"
+    "x image1 image1 y"
+    "x text4 text4 y"
+    "x text5 text5 y"
+    "x image2 image2 y"
+    "x text6 text6 y"
+    "x foot foot y"
+    ;
+}
+
+
+.navbar{
+    grid-area: navbar;
+    background: black;
+    color: white;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    text-decoration: none;
+    z-index: 2;
+}
+
+
+.clean{
+    text-decoration: inherit;
+    color: white;
+    margin-right: 80px;
+}
+a {
+    text-decoration-color: black;
+    list-style: none;
+    color: black;
+}
+li{
+    display: inline;
+}
+ul {
+    list-style: none;
+}
+
+
+
+.title{
+    grid-area: title;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+
+    grid-template-areas: 
+    "actualTitle actualTitle"
+    "credit x";
+}
+.actualTitle{
+    text-align: left;
+    color: black;
+    font-size: 45px;
+    grid-area: actualTitle;
+    padding: 20px 0px 0px 0px;
+}
+.credit{
+    grid-area: credit;
+    text-align: left;
+    color: gray;
+    font-size: 10px;
+    grid-area: credit;
+    padding: 0px 0px 0px 10px;
+}
+
+
+
+
+.text{
+    text-align: left;
+    color: black;
+    font-size: 18px;
+    grid-area: text1;
+    padding: 0px 0px 0px 5px;
+}
+.text2{
+    text-align: left;
+    color: black;
+    font-size: 18px;
+    grid-area: text2;
+    padding: 0px 0px 0px 5px;
+}
+.text2{
+    text-align: left;
+    color: black;
+    font-size: 18px;
+    grid-area: text2;
+    padding: 0px 0px 0px 5px;
+}
+.text3{
+    text-align: left;
+    color: black;
+    font-size: 18px;
+    grid-area: text3;
+    padding: 0px 0px 0px 5px;
+}
+.text4{
+    text-align: left;
+    color: black;
+    font-size: 18px;
+    grid-area: text4;
+    padding: 0px 0px 0px 5px;
+}
+.text6{
+    text-align: left;
+    color: black;
+    font-size: 18px;
+    grid-area: text6;
+    padding: 0px 0px 0px 5px;
+}
+.foot{
+    grid-area: foot;
+    background-color: black;
+    height: 50px;
+    width: 100%;
+}
+
+
+.image1{
+    grid-area: image1;
+    display: grid;
+    grid-template-columns: minmax(1fr, 2);
+    grid-template-rows: minmax(2, auto);
+
+    grid-template-areas: 
+    "linee linee"
+    "actualImage1 actualImage1"
+    "actualImage1 actualImage1"
+    "caption1 caption1"
+    "SndLinee SndLinee";
+}
+.linee{
+    grid-area: linee;
+    position: relative;
+    top:-80%;
+}
+.SndLine{
+    grid-area: SndLinee;
+    position: relative;
+    top: 40%;
+}
+
+.actualImage1{
+    grid-area: actualImage1;
+}
+
+.caption{
+    grid-area: caption1;
+    display: grid;
+    text-align: left;
+    color: black;
+    font-size: 10px;
+    padding: 0px 0px 0px 10px;
+    grid-template-columns: minmax(2, auto);
+    grid-template-rows: minmax(2, auto);
+
+    grid-template-areas: 
+    "actualCaption actualCaption"
+    "quoteCredit quoteCredit";
+}
+.actualCaption1{
+    grid-area: actualCaption;
+    text-align: left;
+    color: black;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 0px 8px 4px;
+}
+.quoteCredit{
+    grid-area: quoteCredit;
+    text-align: right;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+
+.text5{
+    text-align: left;
+    color: black;
+    font-size: 18px;
+    grid-area: text5;
+    padding: 0px 0px 0px 5px;
+}
+
+
+
+.image2{
+    grid-area: image2;
+    display: grid;
+    grid-template-columns: minmax(1fr, 2);
+    grid-template-rows: minmax(2, auto);
+
+    grid-template-areas: 
+    "linee2 linee2"
+    "actualImage2 actualImage2"
+    "actualImage2 actualImage2"
+    "caption2 caption2"
+    "SndLinee2 SndLinee2";
+}
+.linee2{
+    grid-area: linee2;
+    position: relative;
+    top:-80%;
+}
+.SndLine2{
+    grid-area: SndLinee2;
+    position: relative;
+    top: 40%;
+}
+
+.actualImage2{
+    grid-area: actualImage2;
+}
+.caption2{
+    grid-area: caption2;
+    display: grid;
+    text-align: left;
+    color: black;
+    font-size: 10px;
+    padding: 0px 0px 0px 10px;
+    grid-template-columns: minmax(2, auto);
+    grid-template-rows: minmax(2, auto);
+
+    grid-template-areas: 
+    "actualCaption2 actualCaption2"
+    "quoteCredit2 quoteCredit2";
+}
+.actualCaption2{
+    grid-area: actualCaption2;
+    text-align: left;
+    color: black;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 0px 8px 4px;
+}
+.quoteCredit2{
+    grid-area: quoteCredit2;
+    text-align: right;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+@media screen and (min-width: 2300px){
+    .gridd{
+        height: 4500px;
+    }
+}
+@media screen and (min-width: 2000px) and (max-width: 2300px){
+    .gridd{
+        height: 4100px;
+    }
+}
+@media screen and (min-width: 1800px) and (max-width: 2000px){
+    .gridd{
+        height: 4200px;
+    }
+}
+@media screen and (min-width: 1300px) and (max-width: 1800px){
+    .gridd{
+        height: 4600px;
+    }
+}
+@media screen and (min-width: 1035px) and (max-width: 1300px){
+    .gridd{
+        height: 4800px;
+    }
+    
+}
+@media screen and (min-width: 900px) and (max-width: 1035px){
+    .gridd{
+        height: 5200px;
+    }
+}
+@media screen and (max-width: 800px){
+    .gridd{
+        height: 8500px;
+    }
+}

@@ -1,0 +1,135 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.gridd{
+    padding: 0px;
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: minmax(1fr, auto);
+    grid-template-rows: 50px 100px 100px 300px;
+    max-height: minmax(1fr, 1fr);
+    
+
+    grid-template-areas: 
+    "navbar navbar navbar"
+    "AboutTitle AboutTitle AboutTitle"
+    "Linee Linee Linee"
+    "About1container About1container About1container"
+    "About2container About2container About2container";
+}
+
+
+
+.navbar{
+    background-color: black;
+    color: white;
+
+    grid-area: navbar;
+
+    position: sticky;
+    top: 0px;
+
+    text-decoration: none;
+}
+.clean{
+    text-decoration: inherit;
+    color: white;
+    margin-right: 80px;
+}
+a {
+    text-decoration-color: black;
+    list-style: none;
+    color: black;
+}
+li{
+    display: inline;
+}
+ul {
+    list-style: none;
+}
+
+
+
+
+.hr{
+    grid-area: Linee;
+}
+
+
+
+.AboutTitle{
+    text-align: left;
+    color: black;
+    font-size: 4.5vh;
+    position: relative;
+    top: 60%;
+    padding: 0px 0px 0px 5.1vw;
+    grid-area: AboutTitle;
+}
+
+
+
+.About1container{
+    grid-area: About1container;
+    display: grid;
+    width: 100%;
+    height: 10vh;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: minmax(1fr, auto);
+    max-height: minmax(1fr, 1fr);
+
+    grid-template-areas: 
+    "Subtitle1 x"
+    "Text1 Text1";
+}
+.Subtitle1{
+    text-align: left;
+    color: black;
+    font-size: 4vh;
+    position: relative;
+    padding: 0px 0px 0px 5.1vw;
+    grid-area: Subtitle1;
+}
+.Text1{
+    text-align: left;
+    color: black;
+    font-size: 1.5vh;
+    position: relative;
+    padding: 2vh 0px 0px 5.1vw;
+    grid-area: Text1;
+}
+
+
+
+.About2container{
+    grid-area: About2container;
+    display: grid;
+    width: 100%;
+    height: 10vh;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: minmax(1fr, auto);
+    max-height: minmax(1fr, auto);
+
+    grid-template-areas: 
+    "Subtitle2 y"
+    "Text2 Text2";
+}
+.Subtitle2{
+    text-align: left;
+    color: black;
+    font-size: 4vh;
+    position: relative;
+    padding: 0px 0px 0px 5.1vw;
+    grid-area: Subtitle2;
+}
+.Text2{
+    text-align: left;
+    color: black;
+    font-size: 1.5vh;
+    position: relative;
+    padding: 2vh 0px 0px 5.1vw;
+    grid-area: Text2;
+}
